@@ -8,6 +8,7 @@ Sequel.migration do
       String :ingredients, :size=>4000, :null=>false
       Float :cost, :size=>8, :null=>false
       Integer :total_cookies, :size=>4, :null=>false
+      foreign_key :user_id, :users, :null=>false, :key=>[:id]
     end
   end
 end
