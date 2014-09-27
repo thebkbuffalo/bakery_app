@@ -1,0 +1,24 @@
+<h1>Sign On Up!</h1>
+
+<form method="POST" action="/users">
+  <label for="name">Username: </label>
+  <input type="text" name="name" id="name"/>
+</br></br>
+  <label for="email">Email: </label>
+  <input type="text" name="email" id="email"/>
+</br></br>
+  <label for="password">Password: </label>
+  <input type="text" name="password" id="password"/>
+</br></br>
+  <label for="password">Re-Enter Your Password Please: </label>
+  <input type="text" name="password_confirmation" id="password_confirmation"/>
+</br></br>
+  <label for="role">Role: </label>
+  <select name="role" id="role">
+    <option value="customer">Customer</option>
+    <option value="baker">Baker</option>
+    <option value="patisserie">Patisserie</option>
+  </select>
+</br></br>
+  <input type="submit" value="Sign Up!"/>
+</form>
