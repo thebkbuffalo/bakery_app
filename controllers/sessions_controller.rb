@@ -9,13 +9,13 @@ class SessionsController < ApplicationController
   end
 
     post('/') do
-    user = User.find(params[:user])
+    user = User.find(name: params[:name])
     if user.nil?
-      Viewer.create(new_user)
-      redirect to('/viewer/id')
+     redirect to('/')
     else
-      set_current_user_as user
-      redirect to("/viewers/#{current_user.id}")
+      current_user_id = user.id
+      session[:current_user] = {id: current_user_id}
+      redirect to('/')
     end
   end
 
