@@ -7,4 +7,16 @@
 
 class User < Sequel::Model
   one_to_many(:recipes)
+
+      # def baker?
+      #   role == "baker"
+      # end
+      #
+      # def patisserie?
+      #   role == "patisserie"
+      # end
+      #
+      # def customer?
+      #   role == "customer"
+      # end
 end
