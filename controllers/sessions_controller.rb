@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     render(:erb, :'sessions/new')
   end
 
-    post('/session') do
+    post('/') do
     user = User.find(name: params[:user_name])
     if user.nil?
       Viewer.create(new_user)
@@ -17,5 +17,10 @@ class SessionsController < ApplicationController
       set_current_user_as user
       redirect to("/viewers/#{current_user.id}")
     end
+  end
+
+  delete('/') do
+    remove_current_user
+    redirect to('/')
   end
 end # end's class
