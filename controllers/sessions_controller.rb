@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
   end
 
     post('/') do
-    user = User.find(name: params[:user_name])
+    user = User.find(params[:user])
     if user.nil?
       Viewer.create(new_user)
       redirect to('/viewer/id')

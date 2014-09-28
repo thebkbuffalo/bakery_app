@@ -1,0 +1,10 @@
+<h1>Recipes List</h1>
+<h2>will go here</h2>
+
+<% @recipes.each do |recipe| %>
+  <%= recipe.name %><br/>
+  <%= recipe.ingredients %><br/>
+  <%= recipe.cost %><br/>
+  <%= recipe.total_cookies %><br/>
+  <br/><br/>
+<% end %>

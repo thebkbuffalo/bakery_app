@@ -10,6 +10,7 @@ gem 'sequel',   '~> 4.14.0'
 gem 'pg',       '~> 0.17.1'
 gem 'sequel_secure_password'
 
+
 # only used in development locally
 group :development, :test do
   gem 'pry',     '0.10.1'
